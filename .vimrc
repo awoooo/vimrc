@@ -65,14 +65,6 @@ filetype plugin indent on    " required
 "       -> 插件配置和具体设置在vimrc.bundles中
 "==========================================
 
-"折叠行
-hi Folded	ctermfg=darkblue ctermbg=NONE
-hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
-set viewdir=$HOME/.vim/view 
-set foldmethod=marker
-set fcs=vert:\|
-"set fcs=vert:\|,fold:_ "折叠字符
-
 "windows size adjust
 nmap w= :resize +3<CR>
 nmap w- :resize -3<CR>
@@ -248,6 +240,15 @@ set ignorecase
 set smartcase
 
 " 代码折叠
+hi Folded	ctermfg=NONE ctermbg=NONE
+hi FoldColumn	ctermfg=NONE ctermbg=NONE
+"hi Folded	ctermfg=darkblue ctermbg=NONE
+"hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
+set viewdir=$HOME/.vim/view 
+set foldmethod=marker
+set fcs=vert:\|
+"set fcs=vert:\|,fold:_ "折叠字符
+
 set foldenable
 " 折叠方法
 " manual    手工折叠
@@ -256,7 +257,7 @@ set foldenable
 " syntax    使用语法定义折叠
 " diff      对没有更改的文本进行折叠
 " marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
-set foldmethod=indent
+"set foldmethod=indent
 set foldlevel=99
 " 代码折叠自定义快捷键 <leader>zz
 let g:FoldMethod = 0
@@ -280,13 +281,13 @@ set autoindent
 
 " tab相关变更
 " 设置Tab键的宽度        [等同的空格个数]
-set tabstop=4
+set tabstop=2
 " 每一次缩进对应的空格数
-set shiftwidth=4
+set shiftwidth=2
 " 按退格键时可以一次删掉 4 个空格
-set softtabstop=4
+set softtabstop=2
 " insert tabs on the start of a line according to shiftwidth, not tabstop 按退格键时可以一次删掉 4 个空格
-set smarttab
+"set smarttab
 " 将Tab自动转化成空格[需要输入真正的Tab键时，使用 Ctrl+V + Tab]
 set expandtab
 " 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
